@@ -1,0 +1,53 @@
+<%- include("header") %>
+
+
+<div class="login-signup">
+
+  <a class="btn btn-outline-info" href="/">Home</a>
+  <a class="btn btn-outline-info" href="/login">Sign In</a>
+
+</div>
+
+  <div class="row form_f">
+          <div class="col col-lg-6 col-lg-offset-3">
+            <div class="row card text-center " id="form-div">
+
+              <div class="card-body">
+                <h5 class="card-title">Sign Up Form</h5>
+                <form class="form-horizontal" method="POST"  action="/signup">
+                  <fieldset>
+                    <div class="form-group">
+                      <div class="col-lg-12">
+                        <input type="text" class="form-control" value="<%=userN%>" min="4" maxlength="20" oninvalid="this.setCustomValidity('Please enter a username without spaces. Min size 4 and Max size 20')" pattern="^\S+$" name="username" placeholder="Username" required /> </div>
+                        <h5 style="color: red;" ><%=UserName%></h5>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-lg-12">
+                         <input type="email" class="form-control" value="<%= email %>" name="email" placeholder="Email Address" required />
+                        <span class="email-invalid" style="display:none"> Must be a valid email address</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-lg-12">
+                        <input type="password" class="form-control" value="<%= password %>"  name="password" placeholder="Password" rows="4" required></textarea> </div>
+                    </div>
+                    <div class="form-group">
+
+                        <button type="submit" class=" btn btn-outline-primary">Sign Up</button>
+
+
+                    </div>
+                  </fieldset>
+
+                </form>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+
+
+<%- include("footer") %>

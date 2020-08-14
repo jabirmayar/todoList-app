@@ -1,0 +1,136 @@
+html {
+  background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(65deg, #ee9ca7 50%, #ffdde1 50%);
+  min-height: 100%;
+  font-family: 'helvetica neue';
+}
+
+body {
+  background-color: transparent;
+}
+
+h1 {
+  color: #fff;
+  padding: 10px;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+  background-color: #ee9ca7;
+  text-align: center;
+}
+
+.item {
+  position: relative;
+  min-height: 70px;
+  display: flex;
+  word-break: break-all;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+  padding-right: 15px;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #A683E3;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+form.item {
+  text-align: center;
+  margin-left: 20px;
+}
+
+#addBtn {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #ee9ca7;
+  color: #fff;
+  font-size: 30px;
+  padding-bottom: 3px;
+  border-width: 0;
+}
+
+.newitem {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+.newitem:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #A683E3;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.login-signup {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.logout{
+  position: relative;
+  top: 5px;
+  left: 10px;
+}
+
+.card-body{
+  background: white ;
+}
+
+.form_f {
+  color: #fcb69f;
+  margin-top: 15%;
+  padding-left: 35%;
+  width: 100%;
+}
+
+@media only Screen and (max-width: 994px) {
+  .form_f {
+    padding-left: 0%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: auto;
+  }
+}

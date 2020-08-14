@@ -1,0 +1,48 @@
+<%- include("header") -%>
+
+
+<div class="login-signup">
+
+<% if( logged === true) { %>
+
+    <h4 style="color: white;">Welcome, <%= " " + name.toUpperCase() %> </h4>
+
+ <% } else{ %>
+<a class="btn btn-outline-info" href="/login">Sign In</a>
+<a class="btn btn-outline-info" href="/signup">Sign Up</a>
+ <% } %>
+</div>
+<% if( logged === true) { %>
+<form class="logout" action="/logout" method="post">
+  <button class="btn btn-outline-info" type="submit" name="button">Log Out</button>
+</form>
+ <% } else{ %>
+ <% } %>
+
+<div id="heading" class="box ">
+  <h1> <%= kindOfDay %> </h1>
+</div>
+
+<div class="box">
+
+
+  <% newListItems.forEach((item, i) => { %>
+    <form  action="/delete" method="post">
+
+      <div class="item">
+        <input type="checkbox" onchange="this.form.submit()"  value="<%= item._id  %>" name="check" >
+        <p><%= item.name %></p>
+      </div>
+
+    </form>
+  <% }); %>
+
+  <form class="item" action="/" method="post">
+    <input type="text" class="newitem" name="newItem" placeholder="Add new Item" autocomplete="off" required>
+    <button id="addBtn" type="submit" name="button">+</button>
+  </form>
+
+</div>
+
+
+<%- include("footer") -%>
