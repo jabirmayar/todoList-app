@@ -17,7 +17,7 @@ app.use(bodyparser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
 mongoose.set('useCreateIndex', true);
-const dbUrl = "mongodb+srv://kilarikhan1:Kilarikhan1@cluster0.yjitc.azure.mongodb.net/todolistDB?retryWrites=true&w=majority";
+const dbUrl = "mongodb url";
 
 mongoose.connect(dbUrl, {
   useNewUrlParser: true,
